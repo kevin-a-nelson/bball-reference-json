@@ -8,20 +8,25 @@ page = requests.get(
 # Get HTML content
 soup = BeautifulSoup(page.text, 'html.parser')
 
+
 links_list = []
 playersTable = soup.find(id='per_game_stats')
+
+
 playerRows = playersTable.find_all('tr')
+
 
 players = {}
 for playerRow in playerRows:
     playerStats = playerRow.find_all('td')
-    player = {'show': False}
+    player = {}
     for playerStat in playerStats:
         statName = playerStat['data-stat']
         statData = playerStat.string
         player[statName] = statData
 
     if(player != {}):
+        player['show'] = False
         playerName = player['player']
         if(playerName in players):
             players[playerName]['team_id'] = player['team_id']
@@ -35,6 +40,7 @@ for player in players:
 
 teams = {}
 
+
 for player in formattedPlayers:
     teamName = player['team_id']
     if teamName not in teams:
@@ -42,6 +48,11 @@ for player in formattedPlayers:
     else:
         teams[teamName].append(player)
 
+teamNames = []
 for team in teams:
-    file = open(f"{team}.json", "w")
+    teamNames.append(team)
+    file = open(f"NBA/{team}.json", "w")
     file.write(json.dumps(teams[team]))
+
+file = open(f"NBA/teamNames.json", "w")
+file.write(json.dumps(teamNames))
