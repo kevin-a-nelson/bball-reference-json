@@ -19,6 +19,7 @@ for playerRow in playerRows:
     for playerStat in playerStats:
         statName = playerStat['data-stat']
         statData = playerStat.string
+        player['show'] = False
         player[statName] = statData
 
     if(player != {}):
