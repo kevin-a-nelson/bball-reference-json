@@ -1,0 +1,102 @@
+[
+  {
+    "header": "Age",
+    "value": "age"
+  },
+  {
+    "header": "G",
+    "value": "g"
+  },
+  {
+    "header": "GS",
+    "value": "gs"
+  },
+  {
+    "header": "MP",
+    "value": "mp_per_g"
+  },
+  {
+    "header": "PTS/G",
+    "value": "pts_per_g"
+  },
+  {
+    "header": "FG",
+    "value": "fg_per_g"
+  },
+  {
+    "header": "FGA",
+    "value": "fga_per_g"
+  },
+  {
+    "header": "FG%",
+    "value": "fg_pct"
+  },
+  {
+    "header": "3P",
+    "value": "fg3_per_g"
+  },
+  {
+    "header": "3PA",
+    "value": "fg3a_per_g"
+  },
+  {
+    "header": "2P",
+    "value": "fg2_per_g"
+  },
+  {
+    "header": "2PA",
+    "value": "fg2a_per_g"
+  },
+  {
+    "header": "2P%",
+    "value": "fg2_pct"
+  },
+  {
+    "header": "eFG%",
+    "value": "efg_pct"
+  },
+  {
+    "header": "FT",
+    "value": "ft_per_g"
+  },
+  {
+    "header": "FTA",
+    "value": "fta_per_g"
+  },
+  {
+    "header": "FT%",
+    "value": "ft_pct"
+  },
+  {
+    "header": "ORB",
+    "value": "orb_per_g"
+  },
+  {
+    "header": "DRB",
+    "value": "drb_per_g"
+  },
+  {
+    "header": "TRB",
+    "value": "trb_per_g"
+  },
+  {
+    "header": "AST",
+    "value": "ast_per_g"
+  },
+  {
+    "header": "STL",
+    "value": "stl_per_g"
+  },
+  {
+    "header": "BLK",
+    "value": "blk_per_g"
+  },
+  {
+    "header": "TOV",
+    "value": "tov_per_g"
+  },
+  {
+    "header": "PF",
+    "value": "pf_per_g"
+  }
+]
