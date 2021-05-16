@@ -39,11 +39,15 @@ for playerRow in playerRows:
     player = {'show': False}
     for playerStat in playerStats:
         statName = playerStat['data-stat']
+
+        if(statName == "player"):
+            print(playerStat.string)
         statData = playerStat.string
         player[statName] = statData
 
     if(player != {'show': False}):
         playerName = player['player']
+        print(playerName)
         if(playerName in players):
             players[playerName]['team_ID'] = player['team_ID']
         else:
