@@ -1,3 +1,4 @@
+from os import stat
 from typing import Text
 import requests
 from bs4 import BeautifulSoup
@@ -40,14 +41,15 @@ for playerRow in playerRows:
     for playerStat in playerStats:
         statName = playerStat['data-stat']
 
-        if(statName == "player"):
-            print(playerStat.string)
-        statData = playerStat.string
-        player[statName] = statData
+        linkText = playerStat.find('a')
+
+        if(linkText):
+            player[statName] = linkText.string
+        else:
+            player[statName] = playerStat.string
 
     if(player != {'show': False}):
         playerName = player['player']
-        print(playerName)
         if(playerName in players):
             players[playerName]['team_ID'] = player['team_ID']
         else:
